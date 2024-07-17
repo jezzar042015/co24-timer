@@ -14,6 +14,34 @@ const parts: PartModel[] = [
         start: "01:50",
         time: 13,
         title: "Believe the Truth About Jesus (Symposium)​—The Word"
+    },
+    {
+        outline: "8",
+        speaker: "",
+        start: "01:50",
+        time: 11,
+        title: "Believe the Truth About Jesus (Symposium)—His Name"
+    },
+    {
+        outline: "9",
+        speaker: "Jeriel Sarin",
+        start: "01:50",
+        time: 13,
+        title: "Believe the Truth About Jesus (Symposium)​—His Birth"
+    },
+    {
+        outline: "10",
+        speaker: "Jezreel Tan",
+        start: "01:50",
+        time: 13,
+        title: "Lessons From the Land of Jesus (Symposium)​—Geography"
+    },
+    {
+        outline: "11",
+        speaker: "Argeo Sina...",
+        start: "01:50",
+        time: 13,
+        title: "Lessons From the Land of Jesus (Symposium)—Animals"
     }
 ]
 
