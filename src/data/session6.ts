@@ -9,11 +9,11 @@ const session: SessionItem = {
 
 const parts: PartModel[] = [
     {
-        outline: "7",
-        speaker: "Mark Lou Mejias",
-        start: "01:50",
-        time: 13,
-        title: "Believe the Truth About Jesus (Symposium)​—The Word"
+        outline: "48",
+        speaker: "Dean Jacek",
+        start: "02:40",
+        time: 49,
+        title: “Hold Firmly to the Good News”​—Why and How?"
     }
 ]
 
