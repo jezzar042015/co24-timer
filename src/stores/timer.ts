@@ -7,6 +7,8 @@ export const useTimerStore = defineStore('timer', () => {
     const running = ref(false)
     const controls = ref(true)
     const intervalId = ref(0)
+    const timerInterval = ref(0)
+    const baseDateTime = ref<Date>()
     const timers = ref<TimerStorageModel[]>([])
     const seconds = ref(0)
 
@@ -14,6 +16,29 @@ export const useTimerStore = defineStore('timer', () => {
 
     function showControls() {
         controls.value = true
+    }
+
+    function start() {
+        const storedSeconds = seconds.value
+        running.value = true
+        baseDateTime.value = new Date()
+
+        timerInterval.value = setInterval(() => {
+            const currentTs = new Date().getTime();
+            const baseTs = baseDateTime.value?.getTime() ?? 0;
+
+            const timeDiff = Math.abs(currentTs - baseTs);
+            const secondsDifference = timeDiff / 1000;
+            seconds.value = secondsDifference + storedSeconds
+        }, 100)
+    }
+
+    function stop() {
+        if (partStore.activePart) {
+            running.value = false
+            clearInterval(timerInterval.value);
+            setPartRuntime(partStore.activePart?.outline)
+        }
     }
 
     function hideControls(delay: number = 3000) {
@@ -41,7 +66,7 @@ export const useTimerStore = defineStore('timer', () => {
 
         if (timerItem) {
             timerItem.id = id
-            timerItem.time = seconds.value
+            timerItem.time = Math.round(seconds.value * 100) / 100
         }
 
         localStore()
@@ -86,6 +111,7 @@ export const useTimerStore = defineStore('timer', () => {
         running, controls, seconds,
         showControls, hideControls,
         loadStorage, setStorage,
-        setPartRuntime, loadRunTime
+        setPartRuntime, loadRunTime,
+        start, stop
     }
 })

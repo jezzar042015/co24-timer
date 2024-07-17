@@ -11,22 +11,17 @@
 </template>
 
 <script setup lang="ts">
-    import { usePartsStore } from '../stores/parts';
     import { useTimerStore } from '../stores/timer';
 
     const timerStore = useTimerStore()
-    const partStore = usePartsStore()
 
     function start() {
-        timerStore.running = true
+        timerStore.start()
         timerStore.hideControls()
     }
 
     function stop() {
-        if (partStore.activePart) {
-            timerStore.setPartRuntime(partStore.activePart.outline)
-        }
-        timerStore.running = false
+        timerStore.stop()
 
     }
 </script>
