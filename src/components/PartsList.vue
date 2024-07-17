@@ -7,15 +7,15 @@
 </template>
 
 <script setup lang="ts">
-    import { onMounted } from 'vue';
+    import { onMounted, watch } from 'vue';
     import { usePartsStore } from '../stores/parts';
     import { PartModel } from '../types/session';
-    import PartItem from './PartItem.vue';
     import { useTimerStore } from '../stores/timer';
+    import PartItem from './PartItem.vue';
 
     const partStore = usePartsStore()
-    const timerStore = useTimerStore()
     const parts: PartModel[] = partStore.parts.parts
+    const timerStore = useTimerStore()
 
     onMounted(() => {
         if (partStore.parts.parts.length > 0) {
@@ -27,7 +27,14 @@
 
             const firstPart = partStore.parts.parts[0]
             partStore.setActivePart(firstPart)
-            timerStore.loadStorage()
+
+
         }
     })
+
+    watch(
+        () => partStore.parts.id,
+        () => timerStore.loadStorage(),
+        { immediate: true }
+    )
 </script>

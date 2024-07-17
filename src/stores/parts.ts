@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import { PartModel, SessionItem, TimerStorageModel } from "../types/session";
+import { PartModel, SessionItem, } from "../types/session";
+import { useTimerStore } from "./timer";
 import session1 from "../data/session1";
 import session2 from "../data/session2";
 import session3 from "../data/session3";
@@ -9,11 +10,13 @@ import session5 from "../data/session5";
 import session6 from "../data/session6";
 
 export const usePartsStore = defineStore('parts', () => {
+    const timerStore = useTimerStore()
     const parts = ref<SessionItem>(session1)
     const activePart = ref<PartModel>()
 
     function setActivePart(part: PartModel) {
         activePart.value = part
+        timerStore.loadRunTime(activePart.value.outline)
     }
 
     function loadSession(sessionName: string) {
@@ -41,5 +44,6 @@ export const usePartsStore = defineStore('parts', () => {
         }
     }
 
-    return { parts, activePart, loadSession, setActivePart,  }
+
+    return { parts, activePart, loadSession, setActivePart, }
 })

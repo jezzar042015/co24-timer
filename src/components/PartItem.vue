@@ -33,6 +33,6 @@
     function setActive() {
         if (timerStore.running) return
         partStore.setActivePart(props.part)
-        
+        timerStore.loadRunTime(props.part.outline)
     }
 </script>

@@ -8,7 +8,7 @@ export const useTimerStore = defineStore('timer', () => {
     const controls = ref(true)
     const intervalId = ref(0)
     const timers = ref<TimerStorageModel[]>([])
-    const runTime = ref(0)
+    const seconds = ref(0)
 
     const partStore = usePartsStore()
 
@@ -26,12 +26,22 @@ export const useTimerStore = defineStore('timer', () => {
 
     }
 
+    function loadRunTime(id: string) {
+        const timerItem = timers.value.find(t => t.id == id)
+        if (timerItem) {
+            seconds.value = timerItem.time
+        } else {
+            seconds.value = 0
+            timers.value.push({ id, time: 0 })
+        }
+    }
+
     function setPartRuntime(id: string) {
         const timerItem = timers.value.find(t => t.id == id)
-        
+
         if (timerItem) {
             timerItem.id = id
-            timerItem.time = runTime.value
+            timerItem.time = seconds.value
         }
 
         localStore()
@@ -72,5 +82,10 @@ export const useTimerStore = defineStore('timer', () => {
     }
 
 
-    return { running, controls, showControls, hideControls, loadStorage, setStorage, setPartRuntime }
+    return {
+        running, controls, seconds,
+        showControls, hideControls,
+        loadStorage, setStorage,
+        setPartRuntime, loadRunTime
+    }
 })
