@@ -42,6 +42,27 @@ const parts: PartModel[] = [
         start: "01:50",
         time: 13,
         title: "Lessons From the Land of Jesus (Symposium)—Animals"
+    },
+    {
+        outline: "12",
+        speaker: "Jearve Dy",
+        start: "01:50",
+        time: 12,
+        title: "Lessons From the Land of Jesus (Symposium)—Food"
+    },
+    {
+        outline: "13",
+        speaker: "...",
+        start: "01:50",
+        time: 13,
+        title: "Lessons From the Land of Jesus (Symposium)—Homelife"
+    },
+    {
+        outline: "14",
+        speaker: "...",
+        start: "01:50",
+        time: 13,
+        title: "Lessons From the Land of Jesus (Symposium)—Community"
     }
 ]
 
