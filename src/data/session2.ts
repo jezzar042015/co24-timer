@@ -38,7 +38,7 @@ const parts: PartModel[] = [
     },
     {
         outline: "11",
-        speaker: "Argeo Sina...",
+        speaker: "Argeo Sincoñegue",
         start: "01:50",
         time: 13,
         title: "Lessons From the Land of Jesus (Symposium)—Animals"
@@ -52,18 +52,40 @@ const parts: PartModel[] = [
     },
     {
         outline: "13",
-        speaker: "...",
+        speaker: "Giovanni Almachar",
         start: "01:50",
         time: 13,
         title: "Lessons From the Land of Jesus (Symposium)—Homelife"
     },
     {
         outline: "14",
-        speaker: "...",
+        speaker: "Leo Mar Tubaga",
         start: "01:50",
         time: 13,
         title: "Lessons From the Land of Jesus (Symposium)—Community"
-    }
+    },
+    {
+        outline: "15",
+        speaker: "Roys Manzanares",
+        start: "01:50",
+        time: 12,
+        title: "Lessons From the Land of Jesus (Symposium)—Education"
+    },
+    {
+        outline: "16",
+        speaker: "Edwin Mallorca",
+        start: "00:00",
+        time: 14,
+        title: "Lessons From the Land of Jesus (Symposium)—Worship"
+    },
+    {
+        outline: "17",
+        speaker: "Dean Jacek",
+        start: "00:00",
+        time: 34,
+        title: "“Everlasting Good News”​—In What Sense?"
+    },
+
 ]
 
 session.parts = parts
