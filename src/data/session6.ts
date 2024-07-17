@@ -13,7 +13,7 @@ const parts: PartModel[] = [
         speaker: "Dean Jacek",
         start: "02:40",
         time: 49,
-        title: “Hold Firmly to the Good News”​—Why and How?"
+        title: "“Hold Firmly to the Good News”​—Why and How?"
     }
 ]
 
