@@ -1,6 +1,5 @@
 <template>
-    <div id="timer" @click="showControls"
-        class="h-screen w-full bg-black flex flex-col items-center justify-center relative overflow-hidden">
+    <div id="timer" @click="showControls" :class="timerClass">
         <div id="speakers" v-show="timerStore.controls"
             class="flex flex-col gap-2 absolute left-0 h-full w-80 bg-black/50 text-zinc-50 pl-4 pr-2 pt-4 pb-2 shadow-xl">
             <div class="flex justify-between uppercase pl-2 ">
@@ -27,14 +26,34 @@
     import TimerControls from './TimerControls.vue';
     import TimerDigits from './TimerDigits.vue';
     import IconDashboard from '../assets/icons/IconDashboard.vue'
+    import { computed } from 'vue';
 
     const partStore = usePartsStore()
     const pageStore = usePageStore()
     const timerStore = useTimerStore()
 
-    // const warning = computed(()=> {
-    //     return true
-    // })
+    const timerClass = computed(() => {
+        if (!partStore.activePart) return defaultTimerClass()
+
+        const limit = partStore.activePart.time * 60
+        const cushion = limit - 60
+
+        if (timerStore.seconds >= cushion && timerStore.seconds < limit) {
+            return warningTimerClass()
+        } else if (timerStore.seconds >= limit) {
+            return overtimeTimerClass()
+        }
+        return defaultTimerClass()
+    })
+
+    const defaultTimerClass = () =>
+        'h-screen w-full bg-black flex flex-col items-center justify-center relative overflow-hidden'
+
+    const overtimeTimerClass = () =>
+        'h-screen w-full bg-red-500 flex flex-col items-center justify-center relative overflow-hidden'
+
+    const warningTimerClass = () =>
+        'h-screen w-full bg-orange-400 flex flex-col items-center justify-center relative overflow-hidden'
 
     function gotoHome() {
         pageStore.setPage('home')
