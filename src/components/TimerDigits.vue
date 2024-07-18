@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center -m-10">
+    <div class="flex items-center -m-10 select-none">
         <div v-show="!isLessAnHour" class="courier-prime-regular digit text-zinc-50">
             {{ onesDigitOfHours }}
         </div>

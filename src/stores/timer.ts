@@ -41,6 +41,17 @@ export const useTimerStore = defineStore('timer', () => {
         }
     }
 
+    function reset() {
+        if (partStore.activePart) {
+            const activePartId =partStore.activePart.outline
+            const timerItem = timers.value.find(t => t.id == activePartId)
+            if (!timerItem) return
+            timerItem.time = 0
+            seconds.value = 0
+            localStore()
+        }
+    }
+
     function hideControls(delay: number = 3000) {
 
         intervalId.value = setInterval(() => {
@@ -112,6 +123,6 @@ export const useTimerStore = defineStore('timer', () => {
         showControls, hideControls,
         loadStorage, setStorage,
         setPartRuntime, loadRunTime,
-        start, stop
+        start, stop, reset
     }
 })

@@ -1,9 +1,9 @@
 <template>
     <div :class="style" @click="setActive">
-        <div class="text-white/80 text-sm">{{ part.title }}</div>
+        <div class="text-white/50 text-sm">{{ part.title }}</div>
         <div class="flex justify-between font-light">
-            <span class="text-white/60 text-sm">{{ part.speaker }}</span>
-            <span class="text-white/60 text-sm">{{ part.time }}m</span>
+            <span class="text-white/40 text-sm">{{ part.speaker }}</span>
+            <span class="text-white/40 text-sm">{{ part.time }}m</span>
         </div>
     </div>
 </template>
@@ -22,8 +22,8 @@
     }>()
 
     const style = computed(() => {
-        const defaultClass = 'p-2 cursor-pointer bg-white/5 hover:bg-white/10'
-        const activeClass = 'p-2 cursor-pointer bg-white/15 hover:bg-white/15'
+        const defaultClass = ' flex flex-col gap-1 p-2 cursor-pointer bg-white/5 hover:bg-white/10'
+        const activeClass = ' flex flex-col gap-1 p-2 cursor-pointer bg-white/15 hover:bg-white/15'
         if (!partStore.activePart) return defaultClass
 
         return (partStore.activePart.outline == props.part.outline)

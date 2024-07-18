@@ -17,7 +17,7 @@ const parts: PartModel[] = [
     },
     {
         outline: "8",
-        speaker: "",
+        speaker: "Jazer Cajes",
         start: "01:50",
         time: 11,
         title: "Believe the Truth About Jesus (Symposium)—His Name"
