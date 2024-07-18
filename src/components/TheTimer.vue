@@ -32,9 +32,9 @@
     const pageStore = usePageStore()
     const timerStore = useTimerStore()
 
-    const warning = computed(()=> {
-        return true
-    })
+    // const warning = computed(()=> {
+    //     return true
+    // })
 
     function gotoHome() {
         pageStore.setPage('home')
