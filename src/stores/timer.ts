@@ -14,10 +14,6 @@ export const useTimerStore = defineStore('timer', () => {
 
     const partStore = usePartsStore()
 
-    function showControls() {
-        controls.value = true
-    }
-
     function start() {
         const storedSeconds = seconds.value
         running.value = true
@@ -43,7 +39,7 @@ export const useTimerStore = defineStore('timer', () => {
 
     function reset() {
         if (partStore.activePart) {
-            const activePartId =partStore.activePart.outline
+            const activePartId = partStore.activePart.outline
             const timerItem = timers.value.find(t => t.id == activePartId)
             if (!timerItem) return
             timerItem.time = 0
@@ -52,14 +48,19 @@ export const useTimerStore = defineStore('timer', () => {
         }
     }
 
+    function showControls() {
+        controls.value = true
+        clearInterval(intervalId.value)
+        hideControls()
+    }
+
     function hideControls(delay: number = 3000) {
 
         intervalId.value = setInterval(() => {
-            if (running.value) {
+            if (running.value)
                 controls.value = false
-            }
-        }, delay)
 
+        }, delay)
     }
 
     function loadRunTime(id: string) {
