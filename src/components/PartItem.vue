@@ -2,7 +2,7 @@
     <div :class="style" @click="setActive">
         <div class="text-white/50 text-sm">{{ part.title }}</div>
         <div class="flex justify-between font-light">
-            <span class="text-white/40 text-sm">{{ part.speaker }}</span>
+            <!-- <span class="text-white/40 text-sm">{{ part.speaker }}</span> -->
             <span class="text-white/40 text-sm">{{ part.time }}m</span>
         </div>
     </div>
