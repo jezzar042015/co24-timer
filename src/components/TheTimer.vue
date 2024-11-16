@@ -1,7 +1,7 @@
 <template>
     <div id="timer" @click="showControls" :class="timerClass">
         <div id="speakers" v-show="timerStore.controls"
-            class="flex flex-col gap-2 absolute left-0 h-full w-80 bg-black/50 text-zinc-50 pl-4 pr-2 pt-4 pb-2 shadow-xl">
+            class="flex flex-col gap-2 absolute left-0 h-full w-full md:w-80 bg-black/50 text-zinc-50 pl-4 pr-2 pt-4 pb-2 shadow-xl">
             <div class="flex justify-between uppercase pl-2 ">
                 <div>{{ partStore.parts.name }}</div>
                 <div @click="gotoHome" class="pr-3">
@@ -10,10 +10,13 @@
             </div>
             <hr>
             <PartsList />
+            <div class="md:hidden p-3 bg-red-500/40 rounded-sm text-sm">
+                Note: Use bigger screens to use the timer!
+            </div>
         </div>
 
-        <TimerDigits />
-        <TimerControls v-show="timerStore.controls" />
+            <TimerDigits class="hidden md:flex" />
+            <TimerControls v-show="timerStore.controls" class="hidden md:flex"/>
     </div>
 </template>
 
