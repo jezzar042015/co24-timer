@@ -19,28 +19,28 @@ const parts: PartModel[] = [
         outline: "2",
         speaker: "",
         start: "",
-        time: 100,
+        time: 20,
         title: "SYMPOSIUM: How the Good News Influenced Their Life - Stephen"
     },
     {
         outline: "3",
         speaker: "",
         start: "",
-        time: 100,
+        time: 20,
         title: "SYMPOSIUM: How the Good News Influenced Their Life - Philip"
     },
     {
         outline: "4",
         speaker: "",
         start: "",
-        time: 100,
+        time: 20,
         title: "SYMPOSIUM: How the Good News Influenced Their Life - Aquila and Priscila"
     },
     {
         outline: "5",
         speaker: "",
         start: "",
-        time: 100,
+        time: 20,
         title: "SYMPOSIUM: How the Good News Influenced Their Life - Titus"
     },
     {

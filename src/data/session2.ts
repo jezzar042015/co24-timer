@@ -26,28 +26,28 @@ const parts: PartModel[] = [
         outline: "10",
         speaker: "",
         start: "",
-        time: 13,
+        time: 20,
         title: "SYMPOSIUM: “We Recommend Ourselves as God’s Ministers, by ...” - Endurance"
     },
     {
         outline: "11",
         speaker: "",
         start: "",
-        time: 13,
+        time: 20,
         title: "SYMPOSIUM: “We Recommend Ourselves as God’s Ministers, by ...” - Kindness"
     },
     {
         outline: "12",
         speaker: "",
         start: "",
-        time: 13,
+        time: 20,
         title: "SYMPOSIUM: “We Recommend Ourselves as God’s Ministers, by ...” - Honesty"
     },
     {
         outline: "13",
         speaker: "",
         start: "",
-        time: 13,
+        time: 29,
         title: "How Are You Being Trained?"
     }
 
