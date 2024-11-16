@@ -2,47 +2,62 @@ import { PartModel, SessionItem } from "../types/session";
 
 const session: SessionItem = {
     id: "1",
-    day: "Friday",
-    name: "Friday Morning",
+    day: "",
+    name: "Morning Session",
     parts: []
 }
 
 const parts: PartModel[] = [
     {
         outline: "1",
-        speaker: "Jesrel Segovia",
-        start: "09:40",
-        time: 30,
-        title: "Chairman’s Address: Why Do We Need Good News?"
+        speaker: "",
+        start: "10:00",
+        time: 14,
+        title: "How Is the Good News Changing You?"
+    },
+    {
+        outline: "2",
+        speaker: "",
+        start: "",
+        time: 100,
+        title: "SYMPOSIUM: How the Good News Influenced Their Life - Stephen"
     },
     {
         outline: "3",
-        speaker: "Abner Presas",
-        start: "10:55",
-        time: 18,
-        title: "\"They Were Moved by Holy Spirit\" (Symposium) — Matthew"
+        speaker: "",
+        start: "",
+        time: 100,
+        title: "SYMPOSIUM: How the Good News Influenced Their Life - Philip"
     },
     {
         outline: "4",
-        speaker: "Seth Nono",
-        start: "11:14",
-        time: 17,
-        title: "\"They Were Moved by Holy Spirit\" (Symposium) — Mark"
+        speaker: "",
+        start: "",
+        time: 100,
+        title: "SYMPOSIUM: How the Good News Influenced Their Life - Aquila and Priscila"
     },
     {
         outline: "5",
-        speaker: "Daryl Pentojo",
-        start: "11:32",
-        time: 17,
-        title: "\"They Were Moved by Holy Spirit\" (Symposium) — Luke"
+        speaker: "",
+        start: "",
+        time: 100,
+        title: "SYMPOSIUM: How the Good News Influenced Their Life - Titus"
     },
     {
         outline: "6",
-        speaker: "Zuriel Ruaya",
-        start: "11:50",
+        speaker: "",
+        start: "",
         time: 19,
-        title: "\"They Were Moved by Holy Spirit\" (Symposium) — John"
+        title: "Continue in Your “Deeds of Godly Devotion”"
+    },
+    {
+        outline: "7",
+        speaker: "",
+        start: "",
+        time: 29,
+        title: "Baptism: Continue to Be “Submissive to the Good News”"
     }
+
 ]
 
 session.parts = parts
