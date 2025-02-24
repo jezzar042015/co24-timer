@@ -34,7 +34,7 @@
 
     watch(
         () => partStore.parts.id,
-        () => timerStore.loadStorage(),
+        () => timerStore.initializeStorage(),
         { immediate: true }
     )
 </script>

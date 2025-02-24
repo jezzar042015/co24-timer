@@ -9,46 +9,46 @@ const session: SessionItem = {
 
 const parts: PartModel[] = [
     {
-        outline: "8",
+        outline: "6",
         speaker: "",
         start: "",
-        time: 29,
-        title: "Public Bible Discourse: Why Do You Believe What You Believe?"
+        time: 9,
+        title: "Experiences"
     },
     {
-        outline: "9",
+        outline: "7",
         speaker: "",
         start: "",
         time: 29,
         title: "Summary of the Watchtower"
     },
     {
+        outline: "8",
+        speaker: "",
+        start: "",
+        time: 14,
+        title: "SYMPOSIUM: “We Are Not Ashamed of...” - God's Moral Standards"
+    },
+    {
+        outline: "9",
+        speaker: "",
+        start: "",
+        time: 14,
+        title: "SYMPOSIUM: “We Are Not Ashamed of...” - God's Kingdom"
+    },
+    {
         outline: "10",
         speaker: "",
         start: "",
-        time: 15,
-        title: "SYMPOSIUM: “We Recommend Ourselves as God’s Ministers, by ...” - Endurance"
+        time: 14,
+        title: "SYMPOSIUM: “We Are Not Ashamed of...” - God's Representatives"
     },
     {
         outline: "11",
         speaker: "",
         start: "",
-        time: 14,
-        title: "SYMPOSIUM: “We Recommend Ourselves as God’s Ministers, by ...” - Kindness"
-    },
-    {
-        outline: "12",
-        speaker: "",
-        start: "",
-        time: 14,
-        title: "SYMPOSIUM: “We Recommend Ourselves as God’s Ministers, by ...” - Honesty"
-    },
-    {
-        outline: "13",
-        speaker: "",
-        start: "",
-        time: 29,
-        title: "How Are You Being Trained?"
+        time: 44,
+        title: "Boast in Jehovah"
     }
 
 ]

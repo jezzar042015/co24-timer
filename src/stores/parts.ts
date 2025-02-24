@@ -4,6 +4,7 @@ import { PartModel, SessionItem, } from "../types/session";
 import { useTimerStore } from "./timer";
 import session1 from "../data/session1";
 import session2 from "../data/session2";
+import session3 from "../data/session3";
 
 export const usePartsStore = defineStore('parts', () => {
     const timerStore = useTimerStore()
@@ -22,6 +23,10 @@ export const usePartsStore = defineStore('parts', () => {
                 break;
             case 'session2':
                 parts.value = session2
+                break;
+
+            case 'session3':
+                parts.value = session3
                 break;
 
             default:

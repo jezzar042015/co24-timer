@@ -13,51 +13,36 @@ const parts: PartModel[] = [
         speaker: "",
         start: "10:00",
         time: 14,
-        title: "How Is the Good News Changing You?"
+        title: "We Are “Not Ashamed of the Good News”​—Why?"
     },
     {
         outline: "2",
         speaker: "",
         start: "",
-        time: 12,
-        title: "SYMPOSIUM: How the Good News Influenced Their Life - Stephen"
+        time: 14,
+        title: "Taking a Stand for the Good News"
     },
     {
         outline: "3",
         speaker: "",
         start: "",
-        time: 11,
-        title: "SYMPOSIUM: How the Good News Influenced Their Life - Philip"
+        time: 24,
+        title: "Be “a Workman With Nothing to Be Ashamed Of“"
     },
     {
         outline: "4",
         speaker: "",
         start: "",
-        time: 12,
-        title: "SYMPOSIUM: How the Good News Influenced Their Life - Aquila and Priscila"
+        time: 29,
+        title: "Showing the Spirit of Power, Love and Soundness of Mind"
     },
     {
         outline: "5",
         speaker: "",
         start: "",
-        time: 12,
-        title: "SYMPOSIUM: How the Good News Influenced Their Life - Titus"
-    },
-    {
-        outline: "6",
-        speaker: "",
-        start: "",
-        time: 19,
-        title: "Continue in Your “Deeds of Godly Devotion”"
-    },
-    {
-        outline: "7",
-        speaker: "",
-        start: "",
         time: 29,
-        title: "Baptism: Continue to Be “Submissive to the Good News”"
-    }
-
+        title: "Baptism: Continue to Be “Submissive to the Good News“"
+    },
 ]
 
 session.parts = parts
