@@ -9,9 +9,9 @@
                     2024-2025 Circuit Assembly Program With Branch Representative
                 </h2>
             </div>
-            <div class="mt-10 md:mt-24 flex flex-col">
+            <div class="mt-10 md:mt-24 grid grid-cols-2 gap-10">
                 <div v-for="session in sessions" :key="session.id" @click="loadSession(session.id)"
-                    class="p-4 cursor-pointer text-white/70 hover:bg-white/10 first:border-t border-b border-dotted border-gray-500">
+                    class="p-4 cursor-pointer rounded-md text-2xl text-white/70 bg-white/5 hover:bg-white/10  shadow-white/10 hover:shadow min-h-[150px]">
                     {{ session.display }}
                 </div>
             </div>
@@ -29,10 +29,10 @@
 
     const sessions = ref([
         {
-            id: 'session1', display: "Morning Session"
+            id: 'session1', display: "CABR - Morning Session"
         },
         {
-            id: 'session2', display: "Afternoon Session"
+            id: 'session2', display: "CABR - Afternoon Session"
         }
         ,
         {
