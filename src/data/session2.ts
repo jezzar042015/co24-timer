@@ -19,7 +19,7 @@ const parts: PartModel[] = [
         outline: "7",
         speaker: "",
         start: "",
-        time: 29,
+        time: 24,
         title: "Summary of the Watchtower"
     },
     {
